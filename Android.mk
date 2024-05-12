@@ -1,3 +1,4 @@
+ifneq ($(TARGET_BUILD_VARIANT),userdebug)
 LOCAL_PATH := $(call my-dir)
 
 ifeq ($(call is-vendor-board-platform,QCOM),true)
@@ -87,4 +88,5 @@ LOCAL_VENDOR_MODULE := true
 LOCAL_VINTF_FRAGMENTS := power.xml
 
 include $(BUILD_EXECUTABLE)
+endif
 endif
